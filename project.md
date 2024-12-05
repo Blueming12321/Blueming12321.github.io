@@ -1,18 +1,14 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-## My Project
+## Features and Performance Speed of Central Processing Units
 
-I applied machine learning techniques to investigate... Below is my report.
+I applied machine learning techniques to investigate the features of a central processing unit (CPU) and which feature affects the CPU performance the most. Below is my report.
 
 ***
 
 ## Introduction 
 
-Here is a summary description of the topic. Here is the problem. This is why the problem is important.
-
-There is some dataset that we can use to help solve this problem. This allows a machine learning approach. This is how I will solve the problem using supervised/unsupervised/reinforcement/etc. machine learning.
-
-We did this to solve the problem. We concluded that...
+Central Processing Units are really important and are the primary components of a computer that is responsible for executing instructions and performing calculations. The first central processing unit is developed in 
 
 ## Data
 
