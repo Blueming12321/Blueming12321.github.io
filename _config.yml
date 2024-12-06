@@ -1,6 +1,9 @@
-title: George Huang
-description: Features of A CPU and how they affect overall CPU performance
-logo: /assets/IMG/template_logo.png
+title: dunesage.github.io
+description: 
+logo:
 show_downloads: true
-css: /assets/styles.css
+future: true
 
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
