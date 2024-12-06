@@ -1,9 +1,1 @@
-title: Final Project: CPU features and How it Relates to the CPU Performance Speeds
-description: 
-logo:
-show_downloads: true
-future: true
 
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-- jekyll-remote-theme
