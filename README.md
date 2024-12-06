@@ -213,22 +213,23 @@ print(importance_df)
 
 ## Results
 
-# DO Results based on Decision Tree
+From the correlation matrix (Figure 3), we can see that the MMIN and MMAX have the most correlation to CPU ERP and PRP, while the CACH, CHMN, CHMAX have moderate correlation. The MYCT have a low correlation to CPU ERP and PRP. To continue analyzing, a multicollinearity anaylsis is used to show that in fact that the MMIN and MMAX have a strong correlation to one another and both is considered the main memory which is closely correlated to the CPU ERP and PRP. I decided to try different forms of modeling to continue exploring the CPU features. Linear regression is the next model I developed. From Figure 5, I can see that through linear regression, the CHMAX actually has the highest coefficent of importance. Which was originally different from the result that I got from the correlation matrix. I decided to graph the Linear Regression to see whether or not the calculation is credible. From Figure 6, I can see that the Line of Best fit is only accurate for the CPUs with low predicted and low actual CPU performance. As CPU performance increased, the linear regression model fails to model the data. Therefore, I decided to use two other machine learning methods: Random Foresting and Decision Tree.
+
+In the random foresting model (Figure 7), the mean squared error (MSE) is relatively low showing and the R-squared value indicating a 85.7% variance in the data. By analyzing these two features, the random foresting model is a credible model that can be used in our research. The results gave us that similar to the correlation matrix, the MMAX is the feature that is the most critical feature while CHMIN being of relative importance. I have decided to continue to analyze a decision tree model before making our conclusion. 
+
+Continuing onto using a Decision Tree model, in (figure 9), we can see that the decision tree has a higher mean squared error (MSE) and lower R-squared data. Therefore, the decision tree model is not as accurately depicting the data as the random forest model. But the results of the primary feature of importance to the CPU of both models are the same, the MMAX. Therefore, from analyzing three models and a correlation matrix, I have been able to draw the conclusion that in low CPU performance speed models, the channels are the primary importance to dictate the performance speed and as the performance speed increases, the main memory becomes the most important feature in measuring CPU performance speed. Not saying that the cache or the machine cycle time is not important, it is just not as relavent to the CPU performance speed as the other features such as main memory or channels. 
 
 ## Discussion
 
-# Dicuss from toUpperCase78. (2020). intel-processors/Intel_Core_Processors_Analysis_Part1.ipynb at master · toUpperCase78/intel-processors. GitHub. https://github.com/toUpperCase78/intel-processors/blob/master/Intel_Core_Processors_Analysis_Part1.ipynb
-
-How age affects and how this currently affects your orginial hypo.
-
+After being able to analyze the data, I wanted to see how applicable this can be in our real life. I have decided to look into the age and how the age changes the features and how it affects the CPU performance speed. Therefore, finding a project completed by user toUpperCase78 on analyzing the age and performance speed of intel processors (https://github.com/toUpperCase78/intel-processors/blob/master/Intel_Core_Processors_Analysis_Part1.ipynb)[3].  By looking at the results from his/her research, we could see that as technology advances, the CPUs begin to have process at a faster speed and have more CPU cores to them. To handle more CPU cores, the main memory in the computer would start to increase. While this is only seen from older intel CPUs, from the current CPUs that have been released by the two giants: Intel and Advanced Micro Devices, the newer CPUs tend to contain higher amounts of CPU cores which require a higher amount of RAM allow the CPUs to perform at maximum speed.  [4] [5]
 
 ## Conclusion
 
 Here is a brief summary. From this work, the following conclusions can be made:
-* first conclusion
-* second conclusion
+Main memory is the most important feature in measuring CPU speed.
+As more modern CPUs are created, the number of CPU cores are increased which requires a higher amount of main memory which is a located of temporary storage of data for the CPU to fastily access to use in calculations. 
 
-The work can be further extended where there would be newer CPUs to be calculated, a new feature is added to the CPU, how the CPU corresponds with the GPU for graphic depiction, or how the CPUs handle aritifical intelligence. As technology is being more advanced, CPUs and computing is necessary to complete all these tasks. 
+The work can be further extended where there would be newer CPUs to be calculated, a new feature is added to the CPU, how the CPU corresponds with the GPU for graphic depiction, or how the CPUs handle aritifical intelligence. As technology is being more advanced, CPUs and computing is necessary to complete all these tasks.
 
 ## References
 
@@ -237,6 +238,10 @@ The work can be further extended where there would be newer CPUs to be calculate
 [2] Neupane, M. (2019, June 18). How does a CPU work? FreeCodeCamp.org. https://www.freecodecamp.org/news/how-does-a-cpu-work/
 
 [3] toUpperCase78. (2020). intel-processors/Intel_Core_Processors_Analysis_Part1.ipynb at master · toUpperCase78/intel-processors. GitHub. https://github.com/toUpperCase78/intel-processors/blob/master/Intel_Core_Processors_Analysis_Part1.ipynb
+
+[4] Intel® CoreTM Processors - View Latest Generation Core Processors. (n.d.). Intel. https://www.intel.com/content/www/us/en/products/details/processors/core.html
+
+[5] AMD RyzenTM Processors for Desktops. (2024, August 7). AMD. https://www.amd.com/en/products/processors/desktops/ryzen.html
 
 
 [back](./)
