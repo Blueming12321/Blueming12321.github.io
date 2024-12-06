@@ -3,4 +3,5 @@ description: Features of A CPU and how they affect overall CPU performance
 logo: /assets/IMG/template_logo.png
 show_downloads: true
 theme: jekyll-theme-modernist
+css: /assets/styles.css
 
