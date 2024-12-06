@@ -1,3 +1,8 @@
+---
+layout: default
+title: Project
+permalink: /
+---
 
 ## Features and Performance Speed of Central Processing Units
 
