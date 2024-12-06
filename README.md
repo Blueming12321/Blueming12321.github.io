@@ -18,7 +18,7 @@ Central Processing Units are really important and are the primary components of 
 
 Within a CPU, there is a control unit, an arithmetic and logic unit, andstorage (registers and memory). The central processing unit is the part of the CPU that helps assemble the execution of instructions. The ALU or arithemtic and logic unit is where all logical and arithemtic computations occur. The storage is seperated into two parts. A register where data is stored and a more common name to be known is the memory (RAM) where it is a collection of registers arranged and compact together to store a high number of data. All of these parts of the CPU affect the overall performance speed of the CPU. 
 
-
+***
 
 ## Data
 After learning about the basics and the origin of the CPU, 
@@ -52,7 +52,9 @@ After initalizing the data, I wanted primarily look for a comparison to of the e
 
 From the correlation value being 0.9664716584437556, we can tell that there is a strong postive correlation between the estimated and published relative performance. Therefore, the dataset analyzed is accurate. 
 Now we would move on to modeling the datasets. 
-## Modelling
+***
+
+## Modeling
 The primary model that I have decided to analyze is a correlation matrix. The code that I used to get this matrix is:
 ```python
 correlation_matrix = data.corr()
@@ -217,6 +219,7 @@ print(importance_df)
 
 *Figure 11 Visualization of Decision Tree
 
+***
 
 ## Results
 
@@ -226,9 +229,13 @@ In the random foresting model (Figure 7), the mean squared error (MSE) is relati
 
 Continuing onto using a Decision Tree model, in (figure 9), we can see that the decision tree has a higher mean squared error (MSE) and lower R-squared data. Therefore, the decision tree model is not as accurately depicting the data as the random forest model. But the results of the primary feature of importance to the CPU of both models are the same, the MMAX. Therefore, from analyzing three models and a correlation matrix, I have been able to draw the conclusion that in low CPU performance speed models, the channels are the primary importance to dictate the performance speed and as the performance speed increases, the main memory becomes the most important feature in measuring CPU performance speed. Not saying that the cache or the machine cycle time is not important, it is just not as relavent to the CPU performance speed as the other features such as main memory or channels. 
 
+***
+
 ## Discussion
 
 After being able to analyze the data, I wanted to see how applicable this can be in our real life. I have decided to look into the age and how the age changes the features and how it affects the CPU performance speed. Therefore, finding a project completed by user toUpperCase78 on analyzing the age and performance speed of intel processors (https://github.com/toUpperCase78/intel-processors/blob/master/Intel_Core_Processors_Analysis_Part1.ipynb)[3].  By looking at the results from his/her research, we could see that as technology advances, the CPUs begin to have process at a faster speed and have more CPU cores to them. To handle more CPU cores, the main memory in the computer would start to increase. While this is only seen from older intel CPUs, from the current CPUs that have been released by the two giants: Intel and Advanced Micro Devices, the newer CPUs tend to contain higher amounts of CPU cores which require a higher amount of RAM allow the CPUs to perform at maximum speed.  [4] [5]
+
+***
 
 ## Conclusion
 
