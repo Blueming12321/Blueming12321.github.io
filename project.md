@@ -1,9 +1,3 @@
----
-layout: default
-title: Project
-permalink: /
----
-
 ## Features and Performance Speed of Central Processing Units
 
 I applied machine learning techniques to investigate the features of a central processing unit (CPU) and which feature affects the CPU performance the most. Below is my report.
