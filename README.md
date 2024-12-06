@@ -46,6 +46,7 @@ After understanding the acryonyms of the data, we would continue to analyze the 
 *Figure 1. CPU Data uploaded as a CSV from the UCI Machine Learning Repository
 
 After initalizing the data, I wanted primarily look for a comparison to of the estimated relative performance and the published relative performance to see if there was a huge difference. The resulting data gave me:
+
 ![image](https://github.com/user-attachments/assets/3134236d-fea2-45fe-81e4-fd9da30ac71a)
 
 *Figure 2. Correlation between ERP and PRP
