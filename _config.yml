@@ -3,10 +3,4 @@ description: Features of A CPU and how they affect overall CPU performance
 logo: /assets/IMG/template_logo.png
 show_downloads: true
 theme: jekyll-theme-modernist
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      permalink: / # Sets `project.md` as the root page
-      layout: default
+
