@@ -243,5 +243,5 @@ The work can be further extended where there would be newer CPUs to be calculate
 
 [5] AMD RyzenTM Processors for Desktops. (2024, August 7). AMD. https://www.amd.com/en/products/processors/desktops/ryzen.html
 
+Location of the dataset used: https://archive.ics.uci.edu/dataset/29/computer+hardware
 
-[back](./)
