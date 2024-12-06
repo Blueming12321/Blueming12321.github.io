@@ -1,67 +1,241 @@
-**Hi class, welcome to the AOS C111/204 final project!** <img align="right" width="220" height="220" src="/assets/IMG/template_logo.png">
+## Features and Performance Speed of Central Processing Units
 
-For this project, you will be applying your skills to train a machine learning model using real-world data, then publishing a report on your own website.
-
-* To get data for your project, you could:
-  * use **your own data** from a separate research activity
-  * **scour the internet** to find something original, then preprocess it yourself - see the Module Overview on BruinLearn for some resources
-  * browse an archive of data designed for machine learning problems, such as the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/datasets)
-
-* Your report should be written in a scientific language and style. [This template page](/project.md) gives an example structure that you could use, but feel free to make it your own. See Bruinlearn for some examples from previous students.
-
-Your website will be a great addition to your CV, and a place to host future projects too since it doubles as a GitHub repository. The first step is to set up a project website like this one by following the instructions below. 
-
-## How does this website work?
-
-First, check out the Github repository for this site: [https://github.com/atmosalex/atmosalex.github.io/](https://github.com/atmosalex/atmosalex.github.io/).
-
-Using GitHub pages, you can write a website using markdown syntax - the same syntax we use to write comments in Google Colab notebooks. GitHub pages then takes the markdown file and renders it as a web page using a Jekyll theme. The markdown source code for this page [is shown here](https://github.com/atmosalex/atmosalex.github.io/blob/main/README.md?plain=1).
-
-## Setting up your Project Website
-
-### How to copy this site as a template
-1. Create [a GitHub account](https://github.com/)
-2.	Go to [https://github.com/atmosalex/atmosalex.github.io/](https://github.com/atmosalex/atmosalex.github.io/) and click *Use this template*, then **Create a new repository**. [![screenshot][1]][1]
-3.	In the box that says *Repository name*, write your **Github username**, followed by **.github.io**, as shown in the screenshot below. Then click **Create repository** at the bottom. [![screenshot][2]][2]
-4.	Go to the *Settings* tab, then click *Pages* (under *Code and automation*). In the *Build and deployment* section, under **Branch**, select "main" and click save (if it isn't already selected). It should look like this: [![screenshot][3]][3]
-5.	Click the *Actions* tab at the top of the page and check that the build and deployment action has finished. Once it has, navigate to **[your username].github.io** to see your site, which should be a copy of this one! If you cannot see an *Actions* tab, just wait a few minutes then go to your URL to check it is live.
-
-Now you are ready to customize your site! To add your name to the site, go to your repository page on Github, click `_config.yml`, and edit it to replace the temporary title with your name, etc. When we make changes to a project on Github, we have to **commit** the new version of each file. Github keeps track of all the changes we make, making it easy to roll back (i.e. return the project to a previous commit).
-
-[1]: /assets/IMG/instr_new.png
-[2]: /assets/IMG/instr_template.png
-[3]: /assets/IMG/instr_bd.png
-
-### How to change the theme (optional)
-1.	You can choose any theme [listed on this page](https://pages.github.com/themes/), though some do not work as well on mobile devices.
-2.	From GitHub, edit `_config.yml` and replace the `theme:` line with `theme: jekyll-theme-name` where `name` is the name of the theme from the above list. **For the `minima` theme, use a shortened preface like so `theme: minima`**, the others seem to need the whole preface `theme: jekyll-theme-`. You can check the *Actions* tab (as in step 5. above) to make sure the site is building successfully.
-
-### How to change your site logo (optional)
-1. Some themes, such as `jekyll-theme-minimal`, show a logo. In your repository, upload a logo or profile picture to the `assets/IMG/` directory
-2. Open `_config.yml` and modify the line `logo: /assets/IMG/template_logo.png` to point to your new image
+I applied machine learning techniques to investigate the features of a central processing unit (CPU) and which feature affects the CPU performance the most. Below is my report.
 
 ***
 
-## Guide to Adding Content
-* Your repository's `README.md` file (the file you are reading now) acts like a home page. Replace its contents with whatever you want the world to see by editing the file on GitHub.
-* If you want to turn this page into a CV or blog, etc., it may be useful to refer to a [guide for writing Markdown](https://www.markdownguide.org/basic-syntax/).
-* You can create other markdown files (.md) in your repository and navigate to them from this page using links, i.e.: [here is a link to another file, `project.md`](project.md)
-* When editing a markdown file on GitHub, it is useful to wrap text by selecting the *Soft wrap* option as shown: ![screenshot](/assets/IMG/instr_wrap.png)
-* If you want to get even more technical, you can also write HTML in your .md files, and GitHub Pages will render it. For example, the image below is displayed by writing the following (edit this file to see!): `<img align="right" width="200" height="200" src="/assets/IMG/template_frog.png">`
-<img align="right" width="337" height="200" src="/assets/IMG/template_frog.png"> 
+## Introduction: What is a CPU and its Origins
 
-***
+Central Processing Units are really important and are the primary components of a computer that is responsible for executing instructions and performing calculations. The first central processing unit is developed in 1971 under the techonology of the Intel Company. Originally this was a task assigned by the Nippon Calculating Machine Corporation in 1969 to develop 12 custom chips for its new printing calculator. The first CPU had a set of four chips, a central processing unit chip, a supporting read-only memory chip (ROM) for the custom application programs, random-access memory (RAM) chip for processing data, and a final shift-register chip for the input/output (O/I) port. (See Reference [1])
 
-## Delivering your Project
+Within a CPU, there is a control unit, an arithmetic and logic unit, andstorage (registers and memory). The central processing unit is the part of the CPU that helps assemble the execution of instructions. The ALU or arithemtic and logic unit is where all logical and arithemtic computations occur. The storage is seperated into two parts. A register where data is stored and a more common name to be known is the memory (RAM) where it is a collection of registers arranged and compact together to store a high number of data. All of these parts of the CPU affect the overall performance speed of the CPU. 
 
-Your final project is delivered in two components: a report and your code.
 
-### Report
 
-Your report should be **delivered via your website**. Submit a link to your website on BruinLearn so that your instructor can browse it to find your report. 
+## Data
+After learning about the basics and the origin of the CPU, 
+   MYCT: machine cycle time in nanoseconds (integer)
+   MMIN: minimum main memory in kilobytes (integer)
+   MMAX: maximum main memory in kilobytes (integer)
+   CACH: cache memory in kilobytes (integer)
+   CHMIN: minimum channels in units (integer)
+   CHMAX: maximum channels in units (integer)
+   PRP: published relative performance (integer)
+   ERP: estimated relative performance from the original article (integer)
 
-To make this simple, you can write the report using a word processor or Latex, then export it as a .pdf file and upload it to the `assets` directory. You can then link to it [like so](/assets/project_demo.pdf). However, you can also type the report directly onto the website using another markdown page - [here is](/project.md) a template for that.
+Main memory (MMIN/MMAX) is the storage directly accessible by the central processing unit (CPU) for executing instructions and temporarily storing data. It serves as the workspace where active programs and data reside while the CPU processes them. (The RAM and the ROM)
 
-### Code
+Machine cycle time (MYCT) is the time taken by a computer's CPU to complete one basic operation or cycle of fetching, decoding, executing, and storing an instruction. This is measured in clock speed. 
 
-A link to your code must be submitted on BruinLearn, and the course instructor must be able to download your code to mark it. The code could be in a Google Colab notebook (make sure to *share* the notebook so access is set to **Anyone with the link**), or you could upload the code into a separate GitHub repository, or you could upload the code into the `assets` directory of your website and link to it. 
+Cache memory (CACH) is the location where frequently accessed data and instructions is stored. Reducing the time needed for the CPU to retrieve this information from slower main memory.
+
+Channels (CHMIN/CHMAX) are computer pathways that facilitate the transfer of data between different components or devices within a computer system. 
+
+After understanding the acryonyms of the data, we would continue to analyze the dataset of CPU from UCI Machine Learning Repository to see which feature affects the performance speed of the CPU the most or what feature is changed the most to increase the performance speed.
+
+![image](https://github.com/user-attachments/assets/35aec05f-b34b-418d-a4a6-e0e66ac7907c)
+
+*Figure 1. CPU Data uploaded as a CSV from the UCI Machine Learning Repository
+
+After initalizing the data, I wanted primarily look for a comparison to of the estimated relative performance and the published relative performance to see if there was a huge difference. The resulting data gave me:
+![image](https://github.com/user-attachments/assets/3134236d-fea2-45fe-81e4-fd9da30ac71a)
+
+*Figure 2. Correlation between ERP and PRP
+
+From the correlation value being 0.9664716584437556, we can tell that there is a strong postive correlation between the estimated and published relative performance. Therefore, the dataset analyzed is accurate. 
+Now we would move on to modeling the datasets. 
+## Modelling
+The primary model that I have decided to analyze is a correlation matrix. The code that I used to get this matrix is:
+```python
+correlation_matrix = data.corr()
+
+# Display the correlation matrix
+print("Correlation Matrix:")
+print(correlation_matrix)
+
+# Visualize the correlation matrix as a heatmap
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", linewidths=0.5)
+plt.title("Correlation Matrix Heatmap")
+plt.show()
+```
+
+The code results in a correlation matrix heatmap:
+
+
+![image](https://github.com/user-attachments/assets/c94a4d94-fbcb-4fbb-96f5-77953f598a70)
+
+*Figure 3 Correlation matrix heatmap
+
+A heatmap where a hotter color (red) would symbolize a strong relationship between the two features of the CPU, where a colder color (blue) would symbolize a weak relationship.
+
+Then I decided to do a collinearity analysis to see if any of the features are correlates to one another.  
+```python
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+import pandas as pd
+data.drop('ERP', axis=1, inplace=True)
+y = data['PRP']
+numeric_data = data.select_dtypes(include=['float64', 'int64'])
+X = numeric_data.drop('PRP', axis=1)
+
+# Calculate VIF for each feature
+vif_data = pd.DataFrame()
+vif_data['Feature'] = X.columns
+vif_data['VIF'] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
+
+# Display the VIF values
+print(vif_data)
+```
+
+![image](https://github.com/user-attachments/assets/e801a525-2f97-49d0-87ac-bca59ac59a6d)
+
+*Figure 4. Collinearity Analysis
+
+After seeing the correlations, I have decided to use three machine learning methods: Linear Regression, Random Foresting, and Decison Tree.
+
+Linear Regression 
+```python
+# Split into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train a linear regression model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+print("Mean Squared Error (MSE):", mse)
+print("R-squared (R²):", r2)
+
+# Display feature importance (coefficients)
+coefficients = pd.DataFrame({'Feature': X.columns, 'Coefficient': model.coef_})
+print(coefficients.sort_values(by='Coefficient', ascending=False))
+```
+![image](https://github.com/user-attachments/assets/fe2bf2b0-5735-4961-85ae-c2f57a81de30)
+
+*Figure 5 Coefficents in Linear Regression
+
+Then a graphic description of the values. 
+
+![image](https://github.com/user-attachments/assets/1c6012ed-f17e-4bed-a518-e63bfa5da85b)
+
+*Figure 6 Linear Regression in graphic
+
+Then moving onto using Random Foresting
+```python
+# Train-test split
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train the Random Forest model
+from sklearn.ensemble import RandomForestRegressor
+rf_model = RandomForestRegressor(random_state=42, n_estimators=100)
+rf_model.fit(X_train, y_train)
+
+# Make predictions
+rf_pred = rf_model.predict(X_test)
+
+# Evaluate the model
+rf_mse = mean_squared_error(y_test, rf_pred)
+rf_r2 = r2_score(y_test, rf_pred)
+
+print("Random Forest Mean Squared Error (MSE):", rf_mse)
+print("Random Forest R-squared (R²):", rf_r2)
+
+# Feature Importance
+importances = rf_model.feature_importances_
+importance_df = pd.DataFrame({'Feature': X.columns, 'Importance': importances})
+importance_df = importance_df.sort_values(by='Importance', ascending=False)
+
+print("Feature Importances from Random Forest:")
+print(importance_df)
+```
+
+![image](https://github.com/user-attachments/assets/260236ee-a067-4906-ae76-9a74f2a20310)
+
+*Figure 7 Calculated Values of Random Foresting
+
+A graphic description
+![image](https://github.com/user-attachments/assets/03caf84e-211a-42f6-af3d-f42b65fce014)
+
+*Figure 8 Graph of Random Foresting
+
+Then moving onto the last modeling: Decision Tree
+
+```python
+from sklearn.tree import DecisionTreeRegressor, export_text, plot_tree
+from sklearn.metrics import mean_squared_error, r2_score
+import matplotlib.pyplot as plt
+import pandas as pd
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train a Decision Tree Regressor
+dt_model = DecisionTreeRegressor(random_state=42, max_depth=5)  # Adjust max_depth for better performance
+dt_model.fit(X_train, y_train)
+
+# Make predictions
+dt_pred = dt_model.predict(X_test)
+
+# Evaluate the model
+dt_mse = mean_squared_error(y_test, dt_pred)
+dt_r2 = r2_score(y_test, dt_pred)
+
+print("Decision Tree Mean Squared Error (MSE):", dt_mse)
+print("Decision Tree R-squared (R²):", dt_r2)
+
+# Feature importance
+importance_df = pd.DataFrame({'Feature': X.columns, 'Importance': dt_model.feature_importances_})
+importance_df = importance_df.sort_values(by='Importance', ascending=False)
+print("Feature Importances from Decision Tree:")
+print(importance_df)
+```
+
+
+![image](https://github.com/user-attachments/assets/ea88276f-0711-4fec-9c11-9e8829095aaa)
+
+*Figure 9 Calulation of Decision Tree
+
+![image](https://github.com/user-attachments/assets/3a4ca586-a270-43b2-92e4-2b5edbc7caad)
+
+*Figure 10 Plot of Decision Tree
+
+![image](https://github.com/user-attachments/assets/da91c6f7-cae3-4440-b0c4-b5affb4e8a35)
+
+*Figure 11 Visualization of Decision Tree
+
+
+## Results
+
+# DO Results based on Decision Tree
+
+## Discussion
+
+# Dicuss from toUpperCase78. (2020). intel-processors/Intel_Core_Processors_Analysis_Part1.ipynb at master · toUpperCase78/intel-processors. GitHub. https://github.com/toUpperCase78/intel-processors/blob/master/Intel_Core_Processors_Analysis_Part1.ipynb
+
+How age affects and how this currently affects your orginial hypo.
+
+
+## Conclusion
+
+Here is a brief summary. From this work, the following conclusions can be made:
+* first conclusion
+* second conclusion
+
+The work can be further extended where there would be newer CPUs to be calculated, a new feature is added to the CPU, how the CPU corresponds with the GPU for graphic depiction, or how the CPUs handle aritifical intelligence. As technology is being more advanced, CPUs and computing is necessary to complete all these tasks. 
+
+## References
+
+[1] Intel. (2010). The Story of the Intel® 4004. Intel. https://www.intel.com/content/www/us/en/history/museum-story-of-intel-4004.html
+
+[2] Neupane, M. (2019, June 18). How does a CPU work? FreeCodeCamp.org. https://www.freecodecamp.org/news/how-does-a-cpu-work/
+
+[3] toUpperCase78. (2020). intel-processors/Intel_Core_Processors_Analysis_Part1.ipynb at master · toUpperCase78/intel-processors. GitHub. https://github.com/toUpperCase78/intel-processors/blob/master/Intel_Core_Processors_Analysis_Part1.ipynb
+
+
+[back](./)
